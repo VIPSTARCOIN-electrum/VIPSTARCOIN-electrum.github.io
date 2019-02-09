@@ -17,10 +17,61 @@ body {
 	font-family:"游ゴシック Medium",YuGothic,YuGothicM,"Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro",メイリオ,Meiryo,sans-serif;
 }
 
+.accbox {
+    margin: 0px auto;
+    padding: 0;
+    max-width: 120px;
+}
+
+.accbox label {
+    display: block;
+    margin: 1.5px 0;
+    padding : 13px 12px;
+    color: #ffffff;
+    font-weight: bold;
+    background: #151515;
+    cursor :pointer;
+    transition: all 0.5s;
+    border: thick solid #ffffff;
+}
+
+.accbox label:hover {
+    background :#ffffff;
+    color :#151515;
+}
+
+.accbox input {
+    display: none;
+}
+
+.accbox input[type="radio"]:checked + label {
+    background : #ffffff;
+    color : #000000;
+}
+
+.accbox .accshow {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+}
+
+.cssacc:checked + label + .accshow {
+    height: auto;
+    padding: 5px;
+    color: #000000;
+    background: #ffffff;
+    opacity: 1;
+}
+
+.accbox .accshow p {
+    margin: 15px 10px
+}
+
 .header {
 	padding: 170px 30px 80px;
 }
-
 
 .site-title {
 	font-family: 'Open Sans',sans-serif;
@@ -63,11 +114,11 @@ body {
 }
 
 a {
-color: #fff;
+    color: #fff;
 }
 
 a:visited {
-color: #fff;
+    color: #fff;
 }
 
 .dl-wrapper {
