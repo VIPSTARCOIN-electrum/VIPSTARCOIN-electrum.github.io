@@ -49,7 +49,6 @@ function langSet(argLang){
       note2[i].style.display = 'none';
     }
   }
-}
 
   for (var i = 0; i < bottom.length; i++) {
     if(bottom[i].getAttribute("lang") == argLang){
@@ -59,7 +58,6 @@ function langSet(argLang){
       bottom[i].style.display = 'none';
     }
   }
-}
 
   for (var i = 0; i < heading.length; i++) {
     if(heading[i].getAttribute("lang") == argLang){
