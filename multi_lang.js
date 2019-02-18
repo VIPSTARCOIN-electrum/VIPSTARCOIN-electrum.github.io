@@ -11,9 +11,8 @@ function langSet(argLang){
   var text = document.getElementsByClassName("about-text");
   var note = document.getElementsByClassName("about-text-notes");
   var note2 = document.getElementsByClassName("about-text-notes2");
-  var bottom = document.getElementsByClassName("animation-btn")
-  
-  var heading = document.getElementsByClassName("heading")
+  var bottom = document.getElementsByClassName("animation-btn");
+  var heading = document.getElementsByClassName("heading");
 
   for (var i = 0; i < title.length; i++) {
     if(title[i].getAttribute("lang") == argLang){
