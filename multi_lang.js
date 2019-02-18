@@ -11,7 +11,10 @@ function langSet(argLang){
   var text = document.getElementsByClassName("about-text");
   var note = document.getElementsByClassName("about-text-notes");
   var note2 = document.getElementsByClassName("about-text-notes2");
- 
+  var bottom = document.getElementsByClassName("animation-btn")
+  
+  var heading = document.getElementsByClassName("heading")
+
   for (var i = 0; i < title.length; i++) {
     if(title[i].getAttribute("lang") == argLang){
       title[i].style.display = '';
@@ -45,6 +48,26 @@ function langSet(argLang){
     }
     else{
       note2[i].style.display = 'none';
+    }
+  }
+}
+
+  for (var i = 0; i < bottom.length; i++) {
+    if(bottom[i].getAttribute("lang") == argLang){
+      bottom[i].style.display = '';
+    }
+    else{
+      bottom[i].style.display = 'none';
+    }
+  }
+}
+
+  for (var i = 0; i < heading.length; i++) {
+    if(heading[i].getAttribute("lang") == argLang){
+      heading[i].style.display = '';
+    }
+    else{
+      heading[i].style.display = 'none';
     }
   }
 }
