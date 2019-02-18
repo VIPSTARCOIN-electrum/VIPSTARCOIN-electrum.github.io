@@ -1,0 +1,333 @@
+@charset "UTF-8";
+
+html {
+	font-size: 62.5%;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+	background: #F8F7D0 no-repeat fixed left bottom;
+	background-size: cover;
+	color: #000;
+	text-align: center;
+	font-size: 1.4rem;
+	font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO",sans-serif;
+}
+
+.accbox {
+    margin: 0px auto;
+    padding: 0;
+}
+
+.accbox label {
+    display: block;
+    margin: 1.5px 0;
+    padding : 13px 12px;
+    color: #FDC15B;
+    font-weight: bold;
+    background: #F8F7D0;
+    cursor :pointer;
+    transition: all 0.5s;
+    border: thick solid #FDC15B;
+}
+
+.accbox label:hover {
+    background :#FDC15B;
+    color :#F8F7D0;
+}
+
+.accbox input {
+    display: none;
+}
+
+.accbox input[type="radio"]:checked + label {
+    background : #FDC15B;
+    color : #F8F7D0;
+}
+
+.accbox .accshow {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+}
+
+.cssacc:checked + label + .accshow {
+    height: auto;
+    padding: 5px;
+    color: #F8F7D0;
+    background: #FDC15B;
+    opacity: 1;
+}
+
+.accbox .accshow p {
+    margin: 15px 10px;
+}
+
+
+/* Navibar code from https://saruwakakun.com/html-css/reference/nav-drawer */
+
+header {
+  padding:10px;
+  background: #FDC15B;
+  text-align: left;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  z-index:24;
+}
+
+#nav-drawer {
+  position: relative;
+}
+
+/*チェックボックス等は非表示に*/
+.nav-unshown {
+  display:none;
+}
+
+/*アイコンのスペース*/
+#nav-open {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+/*ハンバーガーアイコンをCSSだけで表現*/
+#nav-open span, #nav-open span:before, #nav-open span:after {
+  position: absolute;
+  height: 3px;/*線の太さ*/
+  width: 25px;/*長さ*/
+  border-radius: 3px;
+  background: #000;
+  display: inline-block;
+  content: '';
+  cursor: pointer;
+}
+#nav-open span:before {
+  bottom: -8px;
+}
+#nav-open span:after {
+  bottom: -16px;
+}
+
+/*閉じる用の薄黒カバー*/
+#nav-close {
+  display: none;/*はじめは隠しておく*/
+  position: fixed;
+  z-index: 99;
+  top: 0;/*全体に広がるように*/
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: .3s ease-in-out;
+}
+
+/*中身*/
+#nav-content {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;/*最前面に*/
+  width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
+  max-width: 330px;/*最大幅（調整してください）*/
+  height: 100%;
+  background: #F8F7D0;/*背景色*/
+  transition: .3s ease-in-out;/*滑らかに表示*/
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%);/*左に隠しておく*/
+}
+
+/*チェックが入ったらもろもろ表示*/
+#nav-input:checked ~ #nav-close {
+  display: block;/*カバーを表示*/
+  opacity: .5;
+}
+
+#nav-input:checked ~ #nav-content {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);/*中身を表示（右へスライド）*/
+  box-shadow: 6px 0 25px rgba(0,0,0,.15);
+}
+
+/* end navibar code */
+
+.header-inline-block {
+  display:inline-block;
+}
+
+.header-padding {
+  padding:50px 0;
+}
+
+.site-title {
+	font-family: 'Open Sans',sans-serif;
+	font-size: 7.6rem;
+	margin: 1rem 0;
+}
+
+.site-description {
+	margin-bottom: 50px;
+	color: #888;
+	font-size: 1.6rem;
+}
+
+.heading {
+	position: relative;
+	display: inline-block;
+	margin: 30px 0 15px;
+	padding-bottom: 15px;
+	letter-spacing: 2px;
+	font-size: 4rem;
+}
+
+.heading::before,
+.heading::after {
+	content: '';
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	border-bottom: 1px solid #999;
+}
+
+.heading::before {
+	bottom: 5px;
+}
+
+.about-text {
+	margin: 30px 0;
+	line-height: 2.5;
+}
+
+a {
+    color: #000;
+}
+
+a:visited {
+    color: #000;
+}
+
+.dl-wrapper {
+	width: 60%;
+	margin: 50px auto 0;
+}
+
+.dl-box {
+	display: table-cell;
+}
+
+.dl-pc,.dl-phone,.dl-others {
+	width: 100%;
+	margin-bottom: 50px;
+	table-layout:fixed;
+	display: table;
+}
+
+.dl-icon {
+	width: 100px;
+	height: 100px;
+	margin-bottom: 30px;
+	border: 2px solid;
+	border-radius: 50%;
+	color: #fff;
+	font-size: 6rem;
+	line-height: 92px;
+}
+
+.dl-text {
+	margin: 0 20px;
+	line-height: 2;
+}
+
+.footer {
+	padding: 30px 0;
+	font-size: 1.3rem;
+}
+
+p {
+	text-align: center;
+}
+
+p.about-text-notes {
+	font-size: 1.15rem;
+	line-height: 1.5;
+	margin-top: 50px;
+}
+
+p.about-text-notes2 {
+	font-size: 1.15rem;
+	line-height: 1.5;
+	margin-top: 20px;
+}
+
+h3 {
+	font-size: 1.17em;
+	font-weight: bold;
+}
+@media (max-width: 768px) {
+	body {
+		width: 90%;
+		margin: auto;
+	}
+	
+	h1.site-title {
+		font-size: 3rem;
+	}
+	
+	.heading {
+		padding-bottom: 7px;
+		font-size: 3rem;
+	}
+
+	.heading::before {
+		bottom: 4px;
+	}
+	
+	.about-text {
+		margin: 20px 0;
+		line-height: 2;
+	}
+	
+	.dl-wrapper,
+	.dl-box {
+		display: block;
+	}
+	
+	.dl-icon {
+		margin-bottom: 10px;
+	}
+	
+	.dl-pc,.dl-phone {
+		margin-bottom: 0;
+	}
+	.dl-box {
+		margin: 20px auto;
+	}
+	
+	.dl-text {
+		margin: 0;
+	}
+	
+	p {
+		font-size: 1.2rem;
+	}
+	
+	.phone-br::before {
+		content: "\A" ;
+		white-space: pre ;
+	}
+	
+	p.about-text-notes {
+		margin-top: 30px;
+	}
+}
