@@ -14,7 +14,7 @@ body {
 	color: #000;
 	text-align: center;
 	font-size: 1.4rem;
-	font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO",sans-serif;
+	font-family:"游ゴシック Medium",YuGothic,YuGothicM,"Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro",メイリオ,Meiryo,sans-serif;
 }
 
 .accbox {
@@ -68,6 +68,55 @@ body {
     margin: 15px 10px;
 }
 
+/* Bottom code from https://grow-group.jp/archives/2674/ */
+
+.animation-btn {
+  display: block;
+  text-align: left;
+  background-color: #FDC15B;
+  border: 2px solid #FDC15B;
+  color: #FDC15B;
+  text-decoration: none;
+  font-weight: bold;
+  padding : 13px 12px;
+  position: relative;
+  margin: 0px 0px 1px 0px;
+}
+
+.animation-btn span {
+  position: relative;
+  z-index: 1;
+}
+
+.animation-btn::before,
+.animation-btn::after {
+  content: "";
+  display: block;
+  background-color: #F8F7D0;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: .2s;
+}
+.animation-btn::before {
+  left: 0;
+}
+.animation-btn::after {
+  right: 0;
+}
+
+.animation-btn:hover:before,
+.animation-btn:hover:after {
+  width: 0;
+  background-color: #F8F7D0;
+}
+
+.animation-btn:hover {
+  color: #F8F7D0;
+}
+
+/* end bottom code */
 
 /* Navibar code from https://saruwakakun.com/html-css/reference/nav-drawer */
 
@@ -162,9 +211,12 @@ header {
 /* end navibar code */
 
 .header-inline-block {
-  display:inline-block;
+  display: inline-block;
 }
 
+.in-menu {
+  color: #FDC15B;
+}
 .header-padding {
   padding:50px 0;
 }
