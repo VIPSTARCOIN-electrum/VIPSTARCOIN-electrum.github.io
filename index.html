@@ -1,130 +1,130 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-	<title>Electrum-VIPS</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:800">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-	<link rel="stylesheet" href="normalize.css">
-	<link rel="stylesheet" href="style.css">
-	<script type="text/javascript" src="multi_lang.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <title>Electrum-VIPS</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:800">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="multi_lang.js"></script>
 </head>
 <body>
-	<header class="header">
-			<h1 class="site-title">Electrum-VIPS</h1>
-			<img src="electrum_VIPS.png" alt="VIPS_electrum_img">
-			<p class="site-description">Lightweight VIPSTARCOIN client</p>
-					<div class="accbox">
-        	<input type="checkbox" id="label1" class="cssacc" />
-        	<label for="label1"><i class="fas fa-language"></i> Language</label>
+    <header class="header">
+            <h1 class="site-title">Electrum-VIPS</h1>
+            <img src="electrum_VIPS.png" alt="VIPS_electrum_img">
+            <p class="site-description">Lightweight VIPSTARCOIN client</p>
+                    <div class="accbox">
+            <input type="checkbox" id="label1" class="cssacc" />
+            <label for="label1"><i class="fas fa-language"></i> Language</label>
 
-			<div class="accshow">
-				<input type="radio" name="langKbn" id="sJa" onClick="langSet('ja')">
-				<label for="sJa">日本語</label>
-				<input type="radio" name="langKbn" id="sEn" onClick="langSet('en')">
-				<label for="sEn">English</label>
-				<!--<input type="radio" name="langKbn" id="sZh" onClick="langSet('zh')">
-				<label for="sZh">中文</label>-->
-			</div>
-            	</div>
-	</header>
-	<section class="about">
-		<h2 class="heading" lang="ja">概要</h2>
-		<h2 class="heading" lang="en">About</h2>
-		<!--翻訳班が出来れば中国語版等作成する-->
-		<h3 class="about-title" lang="ja"><i class="fas fa-sync-alt"></i> 同期不要</h3>
-		<h3 class="about-title" lang="en"><i class="fas fa-sync-alt"></i> Not need for sync</h3>
-		<p class="about-text" lang="ja">VIPSTARCOIN COREと違い、<span class="phone-br">全てのブロックチェーンを同期する</span>必要が無いため、<br>すぐに使用することが出来ます。</p>
-		<p class="about-text" lang="en">Electrum-VIPS isn't need for sync all blockchain data. <span class="phone-br">You can use fast.</p>
-		<h3 class="about-title" lang="ja"><i class="fas fa-globe"></i> いつでもどこでも</h3>
-		<h3 class="about-title" lang="en"><i class="fas fa-globe"></i> Anytime, anywhere</h3>
-		<p class="about-text" lang="ja">Electrum-VIPSは全てのハードウェアに<span class="phone-br">対応(※1)しています。</span><br>更に、どのハードウェアからでも同じ<span class="phone-br">データを使うことが出来ます。</span></p>
-		<p class="about-text" lang="en">You can use with all hardwares of Electrum-VIPS(*1).<br>And, you can share your wallet data of all hardwares.</p>
-		<h3 class="about-title" lang="ja"><i class="fas fa-key"></i> SegWitに対応</h3>
-		<h3 class="about-title" lang="en"><i class="fas fa-key"></i> SegWit</h3>
-		<p class="about-text" lang="ja">スケーラビリティ問題を解決する、<span class="phone-br">SegWitを</span>使用することが出来ます。<br>また、vips1で始まる<span class="phone-br">アドレスを</span>生成出来ます。</p>
-		<p class="about-text" lang="en">You can use SegWit to solve scalability problem.<br>And, you can make and use bech32 address<span class="phone-br">(address prefix:vips1).</span></p>
-		<h3 class="about-title" lang="ja"><i class="fas fa-shield-alt"></i> マルチシグネチャに対応</h3>
-		<h3 class="about-title" lang="en"><i class="fas fa-shield-alt"></i> Multi-signature</h3>
-		<p class="about-text" lang="ja">マルチシグを利用したアドレスを<span class="phone-br">生成することが出来ます。</span><br>これは安全に資金を管理する手段の1つです。</p>
-		<p class="about-text" lang="en">You can make and use multi-signature address.<br>With this you can be safely manage your assets.</p>
-		<h3 class="about-title" lang="ja"><i class="fas fa-coins"></i> VIPSトークンに対応</h3>
-		<h3 class="about-title" lang="en"><i class="fas fa-coins"></i> VRC-20 Tokens(VIPS Tokens)</h3>
-		<p class="about-text" lang="ja">VIPSトークンをあなたのPCだけでなく、<span class="phone-br">スマートフォン</span>でも送受金する事が可能です。</p>
-		<p class="about-text" lang="en">You can receive and send VRC20 Tokens <span class="phone-br">with Your PC and Smart Phone.</span></p>
-		<h3 class="about-title" lang="ja"><i class="fas fa-file-signature"></i> スマートコントラクトの生成に対応</h3>
-		<h3 class="about-title" lang="en"><i class="fas fa-file-signature"></i> Smart Contract</h3>
-		<p class="about-text" lang="ja">Electrum-VIPSはブロックチェーンの同期が<br>不要である為、セットアップ完了後、<span class="phone-br">スグに</span>スマートコントラクトを生成出来ます。<br>また、VIPSトークンをスマートフォン上で<span class="phone-br">作成する</span>ことも可能です。</p>
-		<p class="about-text" lang="en">Electrum-VIPS isn't need blockchain sync,<br>so you can create smart contract fast.<br>And, you can also create VRC20 Token.</p>
-		<h3 class="about-title" lang="ja"><i class="fas fa-lock"></i> Trezorに対応</h3>
-		<h3 class="about-title" lang="en"><i class="fas fa-lock"></i> Trezor</h3>
-		<p class="about-text" lang="ja">Trezorハードウェアウォレットに<span class="phone-br">対応しています(※2)。</span><br>これにより、資金を簡単に安全に保管する<span class="phone-br">ことができます。</span><br>また、VIPSトークンもTrezorで安全に<span class="phone-br">保管することが可能です(※3)。</span></p>
-		<p class="about-text" lang="en">You can use Trezor hardware wallet(*2).<br>This allows you to safely manage your assets.<br>You can also VRC-20 tokens manage safely(*3).</p>
-		<h3 class="about-title" lang="ja"><i class="fas fa-check"></i> 最新の機能を</h3>
-		<h3 class="about-title" lang="en"><i class="fas fa-check"></i> Latest functions</h3>
-		<p class="about-text" lang="ja">Electrum-VIPSは本家(Electrum、Bitcoin用<span class="phone-br">ウォレット</span>)を追従し、開発されています。<br>Electrum Bitcoin Walletが更新を行う度に、<span class="phone-br">Electrum-VIPS</span>も更新されます。</p>
-		<p class="about-text" lang="en">Electrum-VIPS is following<span class="phone-br">development of Electrum for Bitcoin.<br>When Electrum updates it will also update Electrum-VIPS.</p>
-		<p class="about-text-notes" lang="ja">※1 iOS(iPhone)版は現在開発中です。<span class="phone-br">次期バージョン</span>の3.4.xにて対応予定です。<br>※2 Trezorはファームウェアバージョン 1.x以降で<span class="phone-br">使用可能</span>です。<br>※3 VIPSトークン(VRC20トークン)のTrezor対応は<span class="phone-br">現在対応中</span>であり、現在使用不可能です。</p>
-		<p class="about-text-notes" lang="en">*1 iOS(iPhone) version is developing now. <span class="phone-br">It </span>can be used in the next major update.(3.4.x~)<br>*2 To use VIPSTARCOIN with Trezor <span class="phone-br">you need firmware version 1.x or later.<br>*3 Trezor can't use VRC-20 tokens now. <span class="phone-br">Developing now.</span></p>
-		<p class="about-text-notes2" lang="ja">注意:Electrum-VIPSでは、海野山猿氏によって<span class="phone-br">開発</span>されている<a href="https://play.google.com/store/apps/details?id=jp.vipstarcoin.wallet">VIPS-wallet</a>と同様に<br>PoSをすることは出来ません。</p>
-		<p class="about-text-notes2" lang="en">Note:As with <a href="https://play.google.com/store/apps/details?id=jp.vipstarcoin.wallet">VIPS-wallet</a> developed by Mr.Uminoyamazaru, Electrum-VIPS is can't Proof of Stake.</p>
+            <div class="accshow">
+                <input type="radio" name="langKbn" id="sJa" onClick="langSet('ja')">
+                <label for="sJa">日本語</label>
+                <input type="radio" name="langKbn" id="sEn" onClick="langSet('en')">
+                <label for="sEn">English</label>
+                <!--<input type="radio" name="langKbn" id="sZh" onClick="langSet('zh')">
+                <label for="sZh">中文</label>-->
+            </div>
+                </div>
+    </header>
+    <section class="about">
+        <h2 class="heading" lang="ja">概要</h2>
+        <h2 class="heading" lang="en">About</h2>
+        <!--翻訳班が出来れば中国語版等作成する-->
+        <h3 class="about-title" lang="ja"><i class="fas fa-sync-alt"></i> 同期不要</h3>
+        <h3 class="about-title" lang="en"><i class="fas fa-sync-alt"></i> Not need for sync</h3>
+        <p class="about-text" lang="ja">VIPSTARCOIN COREと違い、<span class="phone-br">全てのブロックチェーンを同期する</span>必要が無いため、<br>すぐに使用することが出来ます。</p>
+        <p class="about-text" lang="en">Electrum-VIPS isn't need for sync all blockchain data. <span class="phone-br">You can use fast.</p>
+        <h3 class="about-title" lang="ja"><i class="fas fa-globe"></i> いつでもどこでも</h3>
+        <h3 class="about-title" lang="en"><i class="fas fa-globe"></i> Anytime, anywhere</h3>
+        <p class="about-text" lang="ja">Electrum-VIPSは全てのハードウェアに<span class="phone-br">対応(※1)しています。</span><br>更に、どのハードウェアからでも同じ<span class="phone-br">データを使うことが出来ます。</span></p>
+        <p class="about-text" lang="en">You can use with all hardwares of Electrum-VIPS(*1).<br>And, you can share your wallet data of all hardwares.</p>
+        <h3 class="about-title" lang="ja"><i class="fas fa-key"></i> SegWitに対応</h3>
+        <h3 class="about-title" lang="en"><i class="fas fa-key"></i> SegWit</h3>
+        <p class="about-text" lang="ja">スケーラビリティ問題を解決する、<span class="phone-br">SegWitを</span>使用することが出来ます。<br>また、vips1で始まる<span class="phone-br">アドレスを</span>生成出来ます。</p>
+        <p class="about-text" lang="en">You can use SegWit to solve scalability problem.<br>And, you can make and use bech32 address<span class="phone-br">(address prefix:vips1).</span></p>
+        <h3 class="about-title" lang="ja"><i class="fas fa-shield-alt"></i> マルチシグネチャに対応</h3>
+        <h3 class="about-title" lang="en"><i class="fas fa-shield-alt"></i> Multi-signature</h3>
+        <p class="about-text" lang="ja">マルチシグを利用したアドレスを<span class="phone-br">生成することが出来ます。</span><br>これは安全に資金を管理する手段の1つです。</p>
+        <p class="about-text" lang="en">You can make and use multi-signature address.<br>With this you can be safely manage your assets.</p>
+        <h3 class="about-title" lang="ja"><i class="fas fa-coins"></i> VIPSトークンに対応</h3>
+        <h3 class="about-title" lang="en"><i class="fas fa-coins"></i> VRC-20 Tokens(VIPS Tokens)</h3>
+        <p class="about-text" lang="ja">VIPSトークンをあなたのPCだけでなく、<span class="phone-br">スマートフォン</span>でも送受金する事が可能です。</p>
+        <p class="about-text" lang="en">You can receive and send VRC20 Tokens <span class="phone-br">with Your PC and Smart Phone.</span></p>
+        <h3 class="about-title" lang="ja"><i class="fas fa-file-signature"></i> スマートコントラクトの生成に対応</h3>
+        <h3 class="about-title" lang="en"><i class="fas fa-file-signature"></i> Smart Contract</h3>
+        <p class="about-text" lang="ja">Electrum-VIPSはブロックチェーンの同期が<br>不要である為、セットアップ完了後、<span class="phone-br">スグに</span>スマートコントラクトを生成出来ます。<br>また、VIPSトークンをスマートフォン上で<span class="phone-br">作成する</span>ことも可能です。</p>
+        <p class="about-text" lang="en">Electrum-VIPS isn't need blockchain sync,<br>so you can create smart contract fast.<br>And, you can also create VRC20 Token.</p>
+        <h3 class="about-title" lang="ja"><i class="fas fa-lock"></i> Trezorに対応</h3>
+        <h3 class="about-title" lang="en"><i class="fas fa-lock"></i> Trezor</h3>
+        <p class="about-text" lang="ja">Trezorハードウェアウォレットに<span class="phone-br">対応しています(※2)。</span><br>これにより、資金を簡単に安全に保管する<span class="phone-br">ことができます。</span><br>また、VIPSトークンもTrezorで安全に<span class="phone-br">保管することが可能です(※3)。</span></p>
+        <p class="about-text" lang="en">You can use Trezor hardware wallet(*2).<br>This allows you to safely manage your assets.<br>You can also VRC-20 tokens manage safely(*3).</p>
+        <h3 class="about-title" lang="ja"><i class="fas fa-check"></i> 最新の機能を</h3>
+        <h3 class="about-title" lang="en"><i class="fas fa-check"></i> Latest functions</h3>
+        <p class="about-text" lang="ja">Electrum-VIPSはQtum-Electrum(Qtum用<span class="phone-br">ウォレット</span>)を追従し、開発されています。<br>Qtum-Electrumが更新を行う度に、<span class="phone-br">Electrum-VIPS</span>も更新されます。</p>
+        <p class="about-text" lang="en">Electrum-VIPS is following<span class="phone-br">development of Electrum for Qtum.<br>When Qtum-Electrum updates it will also update Electrum-VIPS.</p>
+        <p class="about-text-notes" lang="ja">※1 iOS(iPhone)版は現在開発中です。<span class="phone-br">次期バージョン</span>の3.4.xにて対応予定です。<br>※2 Trezorはファームウェアバージョン 1.x以降で<span class="phone-br">使用可能</span>です。<br>※3 VIPSトークン(VRC20トークン)のTrezor対応は<span class="phone-br">現在対応中</span>であり、現在使用不可能です。</p>
+        <p class="about-text-notes" lang="en">*1 iOS(iPhone) version is developing now. <span class="phone-br">It </span>can be used in the next major update.(3.4.x~)<br>*2 To use VIPSTARCOIN with Trezor <span class="phone-br">you need firmware version 1.x or later.<br>*3 Trezor can't use VRC-20 tokens now. <span class="phone-br">Developing now.</span></p>
+        <p class="about-text-notes2" lang="ja">注意:Electrum-VIPSでは、海野山猿氏によって<span class="phone-br">開発</span>されている<a href="https://play.google.com/store/apps/details?id=jp.vipstarcoin.wallet">VIPS-wallet</a>と同様に<br>PoSをすることは出来ません。</p>
+        <p class="about-text-notes2" lang="en">Note:As with <a href="https://play.google.com/store/apps/details?id=jp.vipstarcoin.wallet">VIPS-wallet</a> developed by Mr.Uminoyamazaru, Electrum-VIPS is can't Proof of Stake.</p>
 
-	</section>
-	<section class="download">
-		<h2 class="heading" lang="ja">ダウンロード</h2>
-		<h2 class="heading" lang="en">Downloads</h2>
-		<div class="dl-wrapper">
-		<h3 class="dl-title">Latest Version : 3.3.4</h3>
-		<div class="dl-pc">
-			<div class="dl-box">
-				<div><!--<a href="#">--><i class="dl-icon fab fa-windows"></i><!--</a>--></div>
-				<p class="dl-text">Windows</p>
-				<p class="dl-text">Coming Soon....</p>
-			</div>
-			<div class="dl-box">
-				<div><!--<a href="#">--><i class="dl-icon fab fa-apple"></i><!--</a>--></div>
-				<p class="dl-text">Mac</p>
-				<p class="dl-text">Coming Soon....</p>
-			</div>
-			<div class="dl-box">
-				<div><!--<a href="#">--><i class="dl-icon fab fa-linux"></i><!--</a>--></div>
-				<p class="dl-text">Linux</p>
-				<p class="dl-text">Coming Soon....</p>
-			</div>
-		</div>
-		<div class="dl-phone">
-			<div class="dl-box">
-				<div><!--<a href="#">--><i class="dl-icon fab fa-android"></i><!--</a>--></div>
-				<p class="dl-text">Android</p>
-				<p class="dl-text">Coming Soon....</p>
-			</div>
-			<div class="dl-box">
-				<div><!--<a href="#">--><i class="dl-icon fab fa-app-store-ios"></i><!--</a>--></div>
-				<p class="dl-text">iOS</p>
-				<p class="dl-text">Coming Soon....</p>
-			</div>
-		</div>
-		<div class="dl-others">
-			<div class="dl-box">
-				<div><a href="https://github.com/VIPSTARCOIN-electrum/electrum-vips"><i class="dl-icon fab fa-github"></i></a></div>
-				<p class="dl-text">Source Code</p>
-			</div>
-			<div class="dl-box">
-				<div><a href="release-note/"><i class="dl-icon far fa-file-alt"></i></a></div>
-				<p class="dl-text">Release Note</p>
-			</div>
-			<div class="dl-box">
-				<div><a href="docs/"><i class="dl-icon fas fa-book"></i></a></div>
-			    <p class="dl-text">Documents</p>
-			</div>
-		</div>
-	    </div>
-		<p class="dl-text"><a href="old-version/">Old Version</a></p>
-	</section>
-	<footer class="footer">
+    </section>
+    <section class="download">
+        <h2 class="heading" lang="ja">ダウンロード</h2>
+        <h2 class="heading" lang="en">Downloads</h2>
+        <div class="dl-wrapper">
+        <h3 class="dl-title">Latest Version : 0.18.12</h3>
+        <div class="dl-pc">
+            <div class="dl-box">
+                <div><!--<a href="#">--><i class="dl-icon fab fa-windows"></i><!--</a>--></div>
+                <p class="dl-text">Windows</p>
+                <p class="dl-text">Coming Soon....</p>
+            </div>
+            <div class="dl-box">
+                <div><!--<a href="#">--><i class="dl-icon fab fa-apple"></i><!--</a>--></div>
+                <p class="dl-text">Mac</p>
+                <p class="dl-text">Coming Soon....</p>
+            </div>
+            <div class="dl-box">
+                <div><!--<a href="#">--><i class="dl-icon fab fa-linux"></i><!--</a>--></div>
+                <p class="dl-text">Linux</p>
+                <p class="dl-text">Coming Soon....</p>
+            </div>
+        </div>
+        <div class="dl-phone">
+            <div class="dl-box">
+                <div><!--<a href="#">--><i class="dl-icon fab fa-android"></i><!--</a>--></div>
+                <p class="dl-text">Android</p>
+                <p class="dl-text">Coming Soon....</p>
+            </div>
+            <div class="dl-box">
+                <div><!--<a href="#">--><i class="dl-icon fab fa-app-store-ios"></i><!--</a>--></div>
+                <p class="dl-text">iOS</p>
+                <p class="dl-text">Coming Soon....</p>
+            </div>
+        </div>
+        <div class="dl-others">
+            <div class="dl-box">
+                <div><a href="https://github.com/VIPSTARCOIN-electrum/electrum-vips"><i class="dl-icon fab fa-github"></i></a></div>
+                <p class="dl-text">Source Code</p>
+            </div>
+            <div class="dl-box">
+                <div><a href="release-note/"><i class="dl-icon far fa-file-alt"></i></a></div>
+                <p class="dl-text">Release Note</p>
+            </div>
+            <div class="dl-box">
+                <div><a href="docs/"><i class="dl-icon fas fa-book"></i></a></div>
+                <p class="dl-text">Documents</p>
+            </div>
+        </div>
+        </div>
+        <p class="dl-text"><a href="old-version/">Old Version</a></p>
+    </section>
+    <footer class="footer">
 
-		<p>&copy; 2018-2019 The Electrum-VIPS developers</p>
-	</footer>
+        <p>&copy; 2018-2019 The Electrum-VIPS developers</p>
+    </footer>
 </body>
 </html>
